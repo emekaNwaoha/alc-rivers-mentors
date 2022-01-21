@@ -1,83 +1,234 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="Description" content="Mentors for ALC 4.0 Mentors.">
-    <meta name="theme-color" content="#036a75">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#036a75">
-    <meta name="msapplication-TileColor" content="#00aba9">
-    <link rel="stylesheet" href="index.css"/>
-    <title>ALC4.0Rivers Mentors and facilitators</title>
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-</head>
-<body>
-    <header>
-        <div class="col2">ALC4.0Rivers State</div>
-        <navbar class="col2"><input type=button class="button" onClick="location.href='#about'" value='About'></navbar>
-    </header>
-    <Main>
-        <div>
-            <h1 id="header">ALC4.0Rivers State Mentors 2019</h1>
-            <p>Connect with your ALC4.0Rivers Mentors/Leaders on Social Media<br/>
-                <small>(All Data gotten from Twitter)</small>
-            </p>
-            <p>By <a href="https://twitter.com/GodwinAgedah" target="_blank">@GodwinAgedah</a> from ALC Mobile Web Specialist Track<br/>
-                <small>(No framework or library was used in making this site)</small>
-            </p>
-            <h2 id="queryStatus">ALL Mentors</h2>
-        </div>
-        <div id="downNavigation">
-            <ul>
-                <li id="All" onclick="query(this.id)"><i class="fa fa-users fa-2x"></i></li>
-                <li id="MWS" onclick="query(this.id)"><i class="fa fa-mobile fa-2x"></i></li>
-                <li id="Android" onclick="query(this.id)"><i class="fa fa-android fa-2x"></i></li>
-                <li id="Cloud" onclick="query(this.id)"><i class="fa fa-cloud fa-2x"></i></li>
-            </ul>
-        </div>
-        <!-- Mentors -->
-        <div id="mentorsDiv">
-            MENTORS DIV
-        </div>
-    </Main>
-    <footer>
-        <div>
-            <div id="about">
-                <h2>About</h2>
-                <p>This Page was built by Godwin Agedah to help members of the ALC4.0Rivers connect with their Mentors on Social Media, Godwin is an aspiring FullStack 
-                    developer looking for mentors and a position in the industry.
-                </p>
-            </div>
-            <div id="author-profile">
-                <h3>Contact me 😊</h3>
-                <p>Around the web</p>
-                <a href="https://twitter.com/GodwinAgedah" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
-                <a href="https://github.com/Godwin9911" target="_blank"><i class="fa fa-github fa-2x"></i></a>
-                <a href="https://www.godwinagedah.com.ng" target="_blank"><i class="fa fa-globe fa-2x"></i></a>
-                <a href="mailto:agedah99@gmail.com" target="_top"><i class="fa fa-envelope fa-2x"></i></a>
-                <p><small>&copy; 2020 <a href="https://www.godwinagedah.com.ng" target="_blank">godwinagedah.com.ng</a></small></p>
-            </div>
-        </div>
+<html>
 
-    </footer>
-    <script>
-        if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('sw.js')
-        .then(swReg => {
-          console.log('Service Worker is registered', swReg);
-        })
-        .catch(err => {
-          console.error('Service Worker Error', err);
-        });
-      });
-    }
-    </script>
-    <script src="index.js"></script>
+<head>
+    <title>
+        My Portfolio Page
+    </title>
+    <meta name="utf-8">
+    <meta charset="">
+    <style>
+        body {
+            font-family: arial;
+            padding: 20px;
+            background: linear-gradient(to top, rgb(8, 64, 247) 0%, rgb(137, 14, 219) 100%);
+
+
+        }
+
+        .header {
+            padding: 30px;
+            font-size: 40px;
+            text-align: center;
+            background: white;
+        }
+        h3{
+            position: absolute;
+        }
+       
+        .card{position: relative;
+            background-color: white;
+            padding: 20px;
+            margin: 55px;
+            display: flex;
+            flex-wrap: wrap;
+
+
+        }
+
+        .footer {
+            padding: 2px;
+            display: table;
+            text-align: center;
+            background: #ddd;
+            margin-top: 20px;
+        }
+
+        img {
+
+            background-color: #aaa;
+            width: 100%;
+            padding-left: 20px;
+        }
+
+        .image {
+            position: relative;
+            border: solid black;
+            width: 170px;
+            height: 200px;
+            left: 320px;
+        }
+
+        .img {
+            position: relative;
+            width: 150px;
+            height: 200px;
+            right: 1px;
+        }
+
+        p {
+            position: relative;
+            left: 10px;
+            font-size: 20px;
+        }
+
+        @media only screen and(max-width:600px) {
+           
+            .img {position:relative;
+                width: 150px;
+                height: 200px;
+               
+            }
+            .card{
+                position: relative;
+            }
+
+            .image {position: absolute;
+                width: 170px;
+                height: 200px;
+                left: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h2>
+            Chukwuemeka Nwaoha
+        </h2>
+    </div>
+    <div class="card">
+        <h3>
+            About Me
+        </h3>
+        <div class="image">
+            <img class="img" src="img/profile.jpg" alt="my profile img">
+        </div>
+        <p>
+            <b> My name is Chukwuemeka Nwaoha, I am a front-end Website Developer,</b>
+            <br><b>I reside in Port Harcourt. Currently, I use HTML, CSS, and JavaScript</b>
+            <br><b>to build front-end designs for websites. When I am not coding, I spend</b>
+            <br><b>my time reading, or dog-walking.</b>
+
+        </p>
+
+    </div>
+    <div class="card">
+        <h2>My Portfolio</h2>
+    
+            
+                    <a href="Calculator/index.html">
+                        <div class="calc">
+                            <img src="img/calcul.png" alt="calculator">
+                        </div>
+                        <h5>JavaScript Arithmetic<br /> CALCULATOR App</h5>
+                    </a>
+                
+                    <a href="todo/index.html">
+                        <div class="calc">
+
+                            <img src="img/todot.png" alt="calculator">
+                        </div>
+                        <h5>JavaScript To-do List App</h5>
+                    </a>
+                
+                    <a href="JS QUIZ/index.html">
+                        <div class="calc">
+
+                            <img src="img/quizy.png" alt="calculator">
+                        </div>
+                        <h5>JavaScript Quiz App</h5>
+                    </a>
+                
+                    <a href="weatherApp/index.html">
+                        <div class="calc">
+
+                            <img src="img/weath.png" alt="calculator">
+                        </div>
+                        <h5>JavaScript Weather App</h5>
+                    </a>
+                
+                    <a href="Digital Clock/index.html">
+                        <div class="calc">
+
+                            <img src="img/digi.png" alt="calculator">
+                        </div>
+                        <h5>JavaScript Digital Clock App</h5>
+                    </a>
+               
+                    <a href="JS Modal/index.html">
+                        <div class="calc">
+
+                            <img src="img/moadall.png" alt="calculator">
+                        </div>
+                        <h5>JavaScript Modal Demo</h5>
+                    </a>
+               
+                
+                    <a href="Click Race Game/index.html">
+                        <div class="calc">
+
+                            <img src="img/clickRace.png" alt="calculator">
+                        </div>
+                        <h5>JavaScript Click Race Game</h5>
+                    </a>
+               
+                    <a href="Analogue Clock/index.html">
+                        <div class="calc">
+
+                            <img src="img/clockg.png" alt="calculator">
+                        </div>
+                        <h5>JavaScript Analogue Clock</h5>
+                    </a>
+              
+                    <a href="backup/index.html">
+                        <div class="calc">
+
+                            <img src="img/upgeoo.png" alt="calculator">
+                        </div>
+                        <h5>Upgeo Technique Limited Website</h5>
+                    </a>
+            
+                <a href="Bwernergy.com">
+                    <div class="calc">
+
+                        <img src="img/bwer.png" alt="calculator">
+                    </div>
+                    <h5>Blue Whales Energy Limited Website</h5>
+                </a>
+            
+                <a href="Reminder App/index.html">
+                    <div class="calc">
+
+                        <img src="img/remind.png" alt="calculator">
+                    </div>
+                    <h5>Front-End Remider App UI/UX</h5>
+                </a>
+            
+                <a href="Image Carousel Slider/carousel.html">
+                    <div class="calc">
+
+                        <img src="img/carousel.png" alt="calculator">
+                    </div>
+                    <h5>JavaScript Image Carousel Slide</h5>
+                </a>
+            
+                    <a href="Password Generator/index.html">
+                        <div class="calc">
+
+                            <img src="img/password.png" alt="calculator">
+                        </div>
+                        <h5>JavaScript Password Generator</h5>
+                    </a>
+              
+    </div>
+    <div class="footer">
+        <a href="#" class="fa fa-facebook">Facebook</a>
+        <a href="#" class="fa fa-twitter">Twitter</a>
+        <a href="#" class="fa fa-medium">Medium</a>
+
+    </div>
 </body>
+
 </html>
